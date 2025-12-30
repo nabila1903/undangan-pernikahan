@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan Harits & Hasna</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&family=Amiri&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#F8F4EF;
+  color:#444;
+}
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+h1,h2{
+  font-family:'Playfair Display',serif;
+  color:#6b5b3e;
+}
+.arab{
+  font-family:'Amiri',serif;
+  font-size:20px;
+}
+.cover{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
+  url('https://images.unsplash.com/photo-1545222904-5a06e40b38ad');
+  background-size:cover;
+}
+button{
+  background:#c9b37e;
+  border:none;
+  padding:12px 26px;
+  color:white;
+  border-radius:30px;
+  font-size:16px;
+}
+.box{
+  background:white;
+  margin:25px auto;
+  padding:30px;
+  border-radius:18px;
+  max-width:520px;
+}
+iframe{
+  width:100%;
+  border-radius:15px;
+}
+input,select,textarea{
+  width:95%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+audio{
+  position:fixed;
+  bottom:15px;
+  right:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIK -->
+<audio autoplay loop controls>
+  <source src="https://cdn.pixabay.com/audio/2022/10/30/audio_4bfa02c2c7.mp3">
+</audio>
+
+<!-- COVER -->
+<section class="cover">
+  <h2>Undangan Pernikahan</h2>
+  <h1>Harits & Hasna</h1>
+  <p>Kepada Yth.</p>
+  <h3 id="tamu"></h3>
+  <button onclick="document.getElementById('isi').scrollIntoView({behavior:'smooth'})">
+    Buka Undangan
+  </button>
+</section>
+
+<div id="isi">
+
+<!-- AYAT -->
+<section>
+  <div class="box">
+    <p class="arab">
+      وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا
+    </p>
+    <p>
+      “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup…”
+      <br><b>(QS. Ar-Rum: 21)</b>
+    </p>
+  </div>
+</section>
+
+<!-- MEMPELAI -->
+<section>
+  <h2>Mempelai</h2>
+  <div class="box">
+    <h3>Harits Abdulloh</h3>
+    <p>Putra dari Alm. Bapak & Ibu Peppy</p>
+    <br>
+    <h3>Nabila Hasna Falikhah, S.Hum.</h3>
+    <p>Putri dari Bapak Maulana Ibrahim, S.E. & Ibu Wiwin Dwi Pratiwi</p>
+  </div>
+</section>
+
+<!-- ACARA -->
+<section>
+  <h2>Detail Acara</h2>
+  <div class="box">
+    <p class="arab">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+    <p><b>Akad Nikah</b><br>
+    Ahad, 5 April 2026<br>
+    Pukul 08.00 WIB</p>
+    <hr>
+    <p><b>Resepsi</b><br>
+    Ahad, 5 April 2026<br>
+    Pukul 09.00 WIB</p>
+    <p><b>Tempat:</b><br>Masjid Fatimah</p>
+  </div>
+</section>
+
+<!-- MAPS -->
+<section>
+  <h2>Lokasi Acara</h2>
+  <div class="box">
+    <iframe height="300"
+    src="https://www.google.com/maps?q=Masjid+Fatimah&output=embed"></iframe>
+    <br><br>
+    <a href="https://maps.app.goo.gl/4w3DsdPydazRG8yK7" target="_blank">
+      <button>Buka Google Maps</button>
+    </a>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section>
+  <h2>Reservasi Kehadiran</h2>
+  <div class="box">
+    <input placeholder="Nama">
+    <select>
+      <option>Hadir</option>
+      <option>Tidak Hadir</option>
+    </select>
+    <textarea placeholder="Ucapan & Doa"></textarea>
+    <button>Kirim</button>
+  </div>
+</section>
+
+<!-- AMPL0P -->
+<section>
+  <h2>Amplop Digital</h2>
+  <div class="box">
+    <p><b>SeaBank</b><br>
+    901817888830<br>
+    a.n Nabila Hasna Falikhah</p>
+    <button onclick="navigator.clipboard.writeText('901817888830')">
+      Salin Nomor
+    </button>
+  </div>
+</section>
+
+<!-- PENUTUP -->
+<section>
+  <p class="arab">جَزَاكُمُ اللَّهُ خَيْرًا</p>
+  <p>
+    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+    Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+  </p>
+  <h2>Harits & Hasna</h2>
+</section>
+
+</div>
+
+<script>
+const params=new URLSearchParams(window.location.search);
+document.getElementById("tamu").innerText=params.get("to")||"Tamu Undangan";
+</script>
+
+</body>
+</html>
